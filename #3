@@ -1,0 +1,56 @@
+#3
+
+class func:
+  def __init__(self):
+    self.__nome    = str()
+    self.__salb    = float()
+    self.__imposto = float()
+    self.__porcen  = float()
+
+  @property
+  def nome(self):
+    return self.__nome
+
+  @property
+  def salb(self):
+    return self.__salb
+
+  @property
+  def imposto(self):
+    return self.__imposto
+
+  @property
+  def porcen(self):
+    return self.__porcen
+
+  @nome.setter
+  def nome(self, a):
+    self.__nome = str(a) 
+  
+  @salb.setter
+  def salb(self, b):
+    self.__salb = float(b)
+
+  @imposto.setter
+  def imposto(self, c):
+    self.__imposto = float(c)
+    
+    self.__sal = self.__salb - self.__imposto
+    print(f"Empregado: {self.__nome}, $ {self.__sal :.2f}")
+    
+  @porcen.setter
+  def porcen(self, d):
+    self.__porcen = float(d)
+
+    __aumento = self.__salb * (self.porcen/100)
+    print(f"Dados atualizados: {self.__nome}, $ {__aumento + self.__sal :.2f}")
+
+mark = func()
+#mark.nome = "Joao Silva"
+#mark.salb = 6000.00
+#mark.imposto = 1000.00
+#mark.porcen = 10.0
+mark.nome = str(input("Nome: "))
+mark.salb = float(input("Salário Bruto: "))
+mark.imposto = float(input("Imposto: "))
+mark.porcen = float(input("Qual a porcentagem de aumento do salário? "))
