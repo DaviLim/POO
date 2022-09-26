@@ -1,0 +1,42 @@
+class Ret:
+  print("Insira a largura e a altura do retângulo\n")
+  
+  def __init__(self):
+    self.__largura = float()
+    self.__altura  = float()
+  
+  @property
+  def largura(self):
+    return self.__largura
+
+  @property
+  def altura(self):
+    return self.__altura
+
+  @largura.setter
+  def largura(self, a):
+    self.__largura = float(a)
+  
+  @altura.setter
+  def altura(self, b):
+    self.__altura = float(b) 
+
+  def imprimir(self):
+    __area = self.__largura * self.altura
+    print(f"\nAREA = {__area :.2F}")
+
+    __perimetro = 2 * (self.__largura + self.__altura)
+    print(f"PERIMETRO = {__perimetro :.2f}") 
+  
+    __diagonal = ((self.__largura ** 2) + (self.__altura ** 2)) ** (1/2)
+    print(f"DIAGONAL = {__diagonal :.2f}")
+
+    
+
+mark = Ret()
+#mark.largura = 3
+#mark.altura  = 4
+mark.largura = float(input(""))
+mark.altura = float(input(""))
+
+mark.imprimir()
