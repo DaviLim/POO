@@ -1,0 +1,34 @@
+class CC:
+  
+  def __init__(self):
+    self.__ctdolar = float()
+    self.__dolares = float()
+    self.__valiof  = 0.06 
+    
+  @property
+  def ctdolar(self):
+    return self.__ctdolar
+  
+  @property
+  def dolares(self):
+    return self.__dolares
+
+  @ctdolar.setter 
+  def ctdolar(self, a): 
+    self.__ctdolar = float(a)  
+  
+  @dolares.setter
+  def dolares(self, b):
+    self.__dolares = float(b)     
+
+  def imprimir(self):
+    __mult = self.__ctdolar * self.__dolares
+    __tot = __mult * self.__valiof + __mult
+    print(f"\nO valor a ser pago em reais = {__tot :.2f}")
+
+mark = CC()
+#mark.ctdolar = 3.10
+#mark.dolares = 200.00
+mark.ctdolar = float(input("Qual é o preço do dólar? "))
+mark.dolares = float(input("\nQuantos dólares serão comprados? "))
+mark.imprimir()
