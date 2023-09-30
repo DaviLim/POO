@@ -1,0 +1,16 @@
+Primeiro cria a instância para o estoque, para cada categoria coloca o id e seu nome
+
+Segundo cria a instância para o peoduto, para cada produto coloca o seu id, nome, valor,
+quantidade que será armazenada, valor de risco e sua categoria
+
+Após isso utiliza o addProduto para adicionar no estoque de para cada instância dos produtos
+
+removeProduto para remover o produto do estoque especificando id do produto e quantidade
+para ser removido, se a quantidade chegar na área de risco, irá ser notificado 
+
+mostrarProduto para mostrar todos os produtos em estoque
+
+Categoria.mostrarCat() para mostrar uma lista de todas as categorias
+
+
+Mesmo o código sendo simples, coloquei o Main como exemplo visual para facilitar o entendimento
